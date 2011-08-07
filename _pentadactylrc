@@ -1,0 +1,52 @@
+"设置[[]]快捷键
+set nextpattern^=\s*(下一页|下一章|下一张|下一篇|下页|后页)\s*
+set previouspattern^=\s*(上一页|上一章|上一张|上一篇|上页|前页)\s*
+
+"命令行下拉菜单最多显示的条目数
+set maxitems=6
+
+
+"反转y和Y键
+noremap y Y
+noremap Y y
+
+"恢复ctrl+x/c/v/a 原本的功能
+noremap <C-c> <C-v><C-c>
+noremap <C-a> <C-v><C-a>
+cnoremap <C-c> <C-v><C-c>
+cnoremap <C-v> <C-v><C-v>
+cnoremap <C-x> <C-v><C-x>
+inoremap <C-a> <C-v><C-a>
+inoremap <C-c> <C-v><C-c>
+inoremap <C-v> <C-v><C-v>
+inoremap <C-x> <C-v><C-x>
+inoremap <C-z> <C-v><C-z>
+
+",快速打开
+noremap <leader>tm :tabopen mail.google.com<CR>
+noremap <leader>tr :tabopen www.google.com/reader<CR>
+noremap <leader>tx :tabopen www.xiaonei.com<CR>
+noremap <leader>tt :tabopen www.twitter.com<CR> 
+
+:set mapleader=,
+
+"在以下网站中禁用pentadactyl
+:autocmd LocationChange (www|mail).google.com/(reader|mail) -js modes.set(modes.PASS_THROUGH)
+:autocmd LocationChange www.twitter.com -js modes.set(modes.PASS_THROUGH)
+
+
+"实现调用其它浏览器来查看当前页面
+map <leader>ie :js io.run("c:\\program files\\internet explorer\\iexplore.exe", [buffer.URL])<CR>
+
+"用H L 打开前一个和后一个标签页,小写即可
+nnoremap h gT
+nnoremap l gt
+
+" map to js functions F2来显示隐藏工具栏
+map <silent> <F2> : set go!=T <CR>
+
+"命令行模式禁用输入法
+style -name commandline-ime chrome://* #dactyl-commandline-command input {ime-mode: inactive;}
+
+"主题
+colorscheme zenburn
