@@ -132,7 +132,7 @@ let buftabs = {
             tabvalue = tabvalue.substr(0, maxlength-3)+"...";
 
         // Bookmark icon
-        if (bookmarks.isBookmarked(browser.contentDocument.location.href))
+        if (bookmarkcache.isBookmarked(browser.contentDocument.location.href))
             tabvalue += "\u2764";
 
         // Brackets and index
@@ -206,7 +206,7 @@ options.add(["buftabs", "bt"],
 
 options.add(["buftabs-maxlength", "btm"],
         "Max length of an entry in the buftabs list",
-        "number", "25", 
+        "number", "15", 
         {
             setter: function (value)
             {

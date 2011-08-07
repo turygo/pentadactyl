@@ -2,6 +2,9 @@
 set nextpattern^=\s*(下一页|下一章|下一张|下一篇|下页|后页)\s*
 set previouspattern^=\s*(上一页|上一章|上一张|上一篇|上页|前页)\s*
 
+"隐藏标签栏
+set showtabline=never
+
 "命令行下拉菜单最多显示的条目数
 set maxitems=6
 
