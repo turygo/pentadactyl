@@ -26,10 +26,10 @@ inoremap <C-x> <C-v><C-x>
 inoremap <C-z> <C-v><C-z>
 
 ",快速打开
-noremap <leader>tm :tabopen mail.google.com<CR>
-noremap <leader>tr :tabopen www.google.com/reader<CR>
-noremap <leader>tx :tabopen www.xiaonei.com<CR>
-noremap <leader>tt :tabopen www.twitter.com<CR> 
+:qmark t www.twitter.com
+:qmark x www.xiaonei.com
+:qmark m www.google.com/mail
+:qmark r www.google.com/reader
 
 :set mapleader=,
 
