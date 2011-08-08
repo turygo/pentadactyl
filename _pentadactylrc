@@ -37,6 +37,9 @@ inoremap <C-z> <C-v><C-z>
 :autocmd LocationChange (www|mail).google.com/(reader|mail) -js modes.set(modes.PASS_THROUGH)
 :autocmd LocationChange www.twitter.com -js modes.set(modes.PASS_THROUGH)
 
+"shift和com自动补全功能
+cnoremap <S-Return> <End>.net<Home><C-Right>www.<CR>
+cnoremap <C-Return> <End>.com<Home><C-Right>www.<CR>
 
 "实现调用其它浏览器来查看当前页面
 map <leader>ie :js io.run("c:\\program files\\internet explorer\\iexplore.exe", [buffer.URL])<CR>
