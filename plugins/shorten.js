@@ -150,7 +150,7 @@ group.commands.add(["shor[ten]", "sht"],
 );
 
 // Add custom settings
-options.add(["shorten-engine", "shte"],
+group.options.add(["shorten-engine", "shte"],
 	"Custom Shorten Engine",
 	"string", "i",
 	{
@@ -162,7 +162,7 @@ options.add(["shorten-engine", "shte"],
 	}
 );
 
-options.add(["shorten-yank", "shty"],
+group.options.add(["shorten-yank", "shty"],
 	"Copy Shorten URL to ClipBoard",
 	"boolean",
 	true

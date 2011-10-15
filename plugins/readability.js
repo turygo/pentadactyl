@@ -1086,12 +1086,12 @@ group.commands.add(["rea[dability]", "rea"],
  * Readability is licensed under the Apache License, Version 2.0.
 **/
 
-options.add(["readability-local", "real"],
+group.options.add(["readability-local", "real"],
 	"Use local script.",
 	"boolean",
 	false
 );
-options.add(["readability-style", "reas"],
+group.options.add(["readability-style", "reas"],
 	"Read style.",
 	"string",
 	"ebook",

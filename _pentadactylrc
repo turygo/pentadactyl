@@ -1,9 +1,8 @@
-"设置[[]]快捷键
+﻿"设置[[]]快捷键
 set nextpattern^=\s*(下一页|下一章|下一张|下一篇|下页|后页)\s*
 set previouspattern^=\s*(上一页|上一章|上一张|上一篇|上页|前页)\s*
 
-"隐藏标签栏
-set showtabline=never
+
 
 "命令行下拉菜单最多显示的条目数
 set maxitems=6
@@ -29,13 +28,15 @@ inoremap <C-z> <C-v><C-z>
 :qmark t www.twitter.com
 :qmark x www.xiaonei.com
 :qmark m www.google.com/mail
-:qmark r www.google.com/reader
+:qmark r https://www.google.com/reader
 
-:set mapleader=,
+"设置快捷键前标
+set mapleader=,
 
 "在以下网站中禁用pentadactyl
-:autocmd LocationChange (www|mail).google.com/(reader|mail) -js modes.set(modes.PASS_THROUGH)
-:autocmd LocationChange www.twitter.com -js modes.set(modes.PASS_THROUGH)
+set passkeys+='www\.google\.com/reader/.*':npmsSjko091vwfW<space>
+set passkeys+="mail\.google\.com/.*":jkgnpo
+set passkeys+="www\.twitter\.com/.*":jkg/?.nrm
 
 "shift和com自动补全功能
 cnoremap <S-Return> <End>.net<Home><C-Right>www.<CR>
@@ -43,6 +44,8 @@ cnoremap <C-Return> <End>.com<Home><C-Right>www.<CR>
 
 "实现调用其它浏览器来查看当前页面
 map <leader>ie :js io.run("c:\\program files\\internet explorer\\iexplore.exe", [buffer.URL])<CR>
+"一键加入Instapaper 
+map <leader>ii bmarks! -title read\ later<CR>
 
 "用H L 打开前一个和后一个标签页,小写即可
 nnoremap h gT
@@ -56,3 +59,6 @@ style -name commandline-ime chrome://* #dactyl-commandline-command input {ime-mo
 
 "主题
 colorscheme zenburn
+
+"设置编辑器
+set editor='"d:\\program files\\vim\\vim73\\gvim.exe " + -f +<line> +"sil! call cursor(0, <column>)" <file>'

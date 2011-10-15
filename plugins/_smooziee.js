@@ -43,10 +43,10 @@ var INFO =
     </item>
 </plugin>;
 
-options.add(["smooziee_scroll_interval", "ssi"],
+group.options.add(["smooziee_scroll_interval", "ssi"],
     "Scrolling interval(unit:ms).",
     "number", 20);
-options.add(["smooziee_scroll_amount", "ssa"],
+group.options.add(["smooziee_scroll_amount", "ssa"],
     "Scrolling amount(unit:px).",
     "number", 400);
 
