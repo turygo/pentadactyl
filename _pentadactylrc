@@ -45,7 +45,7 @@ cnoremap <C-Return> <End>.com<Home><C-Right>www.<CR>
 "实现调用其它浏览器来查看当前页面
 map <leader>ie :js io.run("c:\\program files\\internet explorer\\iexplore.exe", [buffer.URL])<CR>
 "一键加入Instapaper 
-map <leader>ii bmarks! -title read\ later<CR>
+map <leader>ii :bmarks! -title read\ later<CR>
 
 "用H L 打开前一个和后一个标签页,小写即可
 nnoremap h gT
