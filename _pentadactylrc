@@ -34,13 +34,15 @@ inoremap <C-z> <C-v><C-z>
 set mapleader=,
 
 "在以下网站中禁用pentadactyl
-set passkeys+='www\.google\.com/reader/.*':npmsSjko091vwfW<space>
+set passkeys+='www\.google\.com/reader/.*':inpmsSjko091vwfW<space>
 set passkeys+="mail\.google\.com/.*":jkgnpo
 set passkeys+="www\.twitter\.com/.*":jkg/?.nrm
 
 "shift和com自动补全功能
 cnoremap <S-Return> <End>.net<Home><C-Right>www.<CR>
 cnoremap <C-Return> <End>.com<Home><C-Right>www.<CR>
+
+map <C-d> :dicty<CR>
 
 "实现调用其它浏览器来查看当前页面
 map <leader>ie :js io.run("c:\\program files\\internet explorer\\iexplore.exe", [buffer.URL])<CR>
