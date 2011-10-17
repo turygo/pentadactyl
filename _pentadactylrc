@@ -45,7 +45,8 @@ cnoremap <C-Return> <End>.com<Home><C-Right>www.<CR>
 "实现调用其它浏览器来查看当前页面
 map <leader>ie :js io.run("c:\\program files\\internet explorer\\iexplore.exe", [buffer.URL])<CR>
 "一键加入Instapaper 
-map <leader>ii :bmarks! -title read\ later<CR>
+map <leader>ii :instapaper<CR>
+command! instapaper :open javascript:function iprl5(){var d=document,z=d.createElement('scr'+'ipt'),b=d.body,l=d.location;try{if(!b)throw(0);d.title='(Saving...) '+d.title;z.setAttribute('src',l.protocol+'//www.instapaper.com/j/erEfymHsNsJb?u='+encodeURIComponent(l.href)+'&t='+(new Date().getTime()));b.appendChild(z);}catch(e){alert('Please wait until the page has loaded.');}}iprl5();void(0)
 
 "用H L 打开前一个和后一个标签页,小写即可
 nnoremap h gT
