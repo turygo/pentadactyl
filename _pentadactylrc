@@ -26,7 +26,7 @@ inoremap <C-z> <C-v><C-z>
 
 ",快速打开
 :qmark t www.twitter.com
-:qmark x www.xiaonei.com
+:qmark i www.instapaper.com/
 :qmark m www.google.com/mail
 :qmark r https://www.google.com/reader
 
