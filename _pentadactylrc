@@ -26,7 +26,7 @@ inoremap <C-z> <C-v><C-z>
 
 ",快速打开
 :qmark t www.twitter.com
-:qmark i www.readitlater.com/
+:qmark i http://readitlaterlist.com/a/queue/
 :qmark m www.google.com/mail
 :qmark r https://www.google.com/reader
 
@@ -49,6 +49,8 @@ map <C-d> :dicty<CR>
 map <leader>ie :js io.run("c:\\program files\\internet explorer\\iexplore.exe", [buffer.URL])<CR>
 "一键加入Evernote
 map <C-e> :evernote<CR>
+"一键将页面转为readability
+map <C-r> :readability<CR>
 
 "用H L 打开前一个和后一个标签页,小写即可
 nnoremap h gT
